@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE service-builder PUBLIC "-//Liferay//DTD Service Builder 6.2.0//EN" "http://www.liferay.com/dtd/liferay-service-builder_6_2_0.dtd">
+<service-builder package-path="com.wits.portal">
+	<author>Administrator</author>
+	<namespace>AppConnectorNS</namespace>
+
+	<entity name="Connector" local-service="true" remote-service="true">
+
+		<!-- PK fields -->
+
+		<column name="connectorId" type="long" primary="true" />
+
+		<!-- Group instance -->
+
+		<column name="groupId" type="long" />
+
+		<!-- Audit fields -->
+
+		<column name="companyId" type="long" />
+		<column name="userId" type="long" />
+		<column name="userName" type="String" />
+		<column name="createDate" type="Date" />
+		<column name="modifiedDate" type="Date" />
+		
+		<!-- Workflow fields -->
+		
+	
+
+		<!-- Other fields -->
+<!-- comanyName type name versionCode versionName url status updateLog remark -->
+		<column name="comanyName" type="String" />
+		<column name="type" type="String" />
+		<column name="name" type="String" />
+		<column name="versionCode" type="String" />
+		<column name="versionName" type="String" />
+        <column name="url" type="String" />
+        <column name="status" type="int" />
+        <column name="updateLog" type="String" />
+        <column name="remark" type="String" />
+        
+
+		<!-- Order -->
+
+		<order>
+			<order-column name="comanyName" order-by="asc" />
+			<order-column name="type" order-by="asc"/>
+		    <order-column name="status" order-by="asc"/>
+		</order>
+
+		<!-- Finder methods -->
+
+		<finder name="companyId_groupId_Status" return-type="Collection">
+		    <finder-column name="companyId" />
+			<finder-column name="groupId" />
+			<finder-column name="status" />
+		</finder>
+	</entity>
+</service-builder>

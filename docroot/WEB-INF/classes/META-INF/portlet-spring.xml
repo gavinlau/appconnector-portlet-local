@@ -1,0 +1,7 @@
+<?xml version="1.0"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" default-destroy-method="destroy" default-init-method="afterPropertiesSet" xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+	<bean id="com.wits.portal.service.ConnectorLocalService" class="com.wits.portal.service.impl.ConnectorLocalServiceImpl" />
+	<bean id="com.wits.portal.service.ConnectorService" class="com.wits.portal.service.impl.ConnectorServiceImpl" />
+	<bean id="com.wits.portal.service.persistence.ConnectorPersistence" class="com.wits.portal.service.persistence.ConnectorPersistenceImpl" parent="basePersistence" />
+</beans>
