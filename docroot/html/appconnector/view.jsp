@@ -2,7 +2,7 @@
 <%@page import="com.wits.portal.service.ConnectorLocalServiceUtil"%>
 <%@page import="com.wits.portal.AppConnectorPortlet"%>
 <%@include file="/html/init.jsp"%>
-
+<h1>New GIT</h1>
 <portlet:renderURL windowState="<%= LiferayWindowState.EXCLUSIVE.toString() %>" var="addRenderURL">
   <portlet:param name="mvcPath" value="/html/appconnector/add.jsp" />
 </portlet:renderURL>
